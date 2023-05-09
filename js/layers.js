@@ -97,6 +97,11 @@ addLayer("p", {
     description: "wow boost!",
     cost: new Decimal(50000),
         },
+	25: {
+    title: "Amazing Boost I",
+    description: "wow boost! again",
+    cost: new Decimal(350000),
+        },
     },
 })
 addLayer("n", {
