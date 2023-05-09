@@ -41,5 +41,16 @@ addLayer("p", {
     description: "add a 2.5x multiplier",
     cost: new Decimal(10),
         },
+	14: {
+    title: "better Boost",
+    description: "add a 3x multiplier",
+    cost: new Decimal(15),
+        },
+	15: {
+    title: "Good Boost",
+    description: "ok were getting there (3.7x)",
+    cost: new Decimal(40),
+        },
+
     },
 })
