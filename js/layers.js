@@ -51,6 +51,10 @@ addLayer("p", {
     description: "ok were getting there (3.7x)",
     cost: new Decimal(40),
         },
-
+	16: {
+    title: "OMG Boost",
+    description: "wow plank boost!",
+    cost: new Decimal(200),
+        },
     },
 })
