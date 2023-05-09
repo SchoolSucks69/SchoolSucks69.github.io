@@ -31,5 +31,15 @@ addLayer("p", {
     description: "Double your point gain.",
     cost: new Decimal(1),
         },
+	 12: {
+    title: "Another Basic Boost",
+    description: "Double your point gain.",
+    cost: new Decimal(4),
+        },
+	13: {
+    title: "Ok Boost",
+    description: "add a 2.5x multiplier",
+    cost: new Decimal(10),
+        },
     },
 })
