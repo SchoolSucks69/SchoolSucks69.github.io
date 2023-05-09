@@ -16,6 +16,9 @@ addLayer("p", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
 	    if (hasUpgrade('p', 16)) mult = mult.times(2)
+	    if (hasUpgrade('p', 17)) mult = mult.times(2.5)
+	    if (hasUpgrade('p', 18)) mult = mult.times(2.3)
+	    if (hasUpgrade('p', 19)) mult = mult.times(2)
 	    if (hasUpgrade('n', 11)) gain = gain.times(4)
         return mult
     },
@@ -57,6 +60,21 @@ addLayer("p", {
     title: "OMG Boost",
     description: "wow plank boost!",
     cost: new Decimal(200),
+        },
+	17: {
+    title: "Nice! Boost",
+    description: "wow boost!",
+    cost: new Decimal(200),
+        },
+	18: {
+    title: "Nice! Boost 2",
+    description: "wow boost!",
+    cost: new Decimal(400),
+        },
+	19: {
+    title: "Nice! Boost 3",
+    description: "wow boost!",
+    cost: new Decimal(1200),
         },
     },
 })
