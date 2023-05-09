@@ -20,6 +20,7 @@ addLayer("p", {
 	    if (hasUpgrade('p', 18)) mult = mult.times(2.3)
 	    if (hasUpgrade('p', 19)) mult = mult.times(2)
 	    if (hasUpgrade('p', 25)) mult = mult.times(2)
+            if (hasUpgrade('p', 26)) mult = mult.times(upgradeEffect('p', 26))
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
@@ -102,6 +103,15 @@ addLayer("p", {
     title: "Amazing Boost I",
     description: "wow boost! again 2x NM, PL and Points",
     cost: new Decimal(350000),
+        },
+	26: {
+    title: "Prestige points barely boost prestige points",
+    description: "big big commitment",
+    cost: new Decimal(5000000),
+    effect() {
+        return player.points.add(1).pow(0.0015)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
     },
 })
