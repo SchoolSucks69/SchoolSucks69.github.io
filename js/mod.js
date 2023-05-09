@@ -54,6 +54,7 @@ if (hasUpgrade('p', 22)) gain = gain.times(3.5)
 if (hasUpgrade('p', 23)) gain = gain.times(3)
 if (hasUpgrade('n', 12)) gain = gain.times(10)
 if (hasUpgrade('p', 25)) gain = gain.times(2)
+if (hasUpgrade('n', 13)) gain = gain.times(12)
 
 	return gain
 }
