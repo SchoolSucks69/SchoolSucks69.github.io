@@ -154,5 +154,10 @@ addLayer("n", {
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
+        14: {
+    title: "Even more Points Funnies",
+    description: "12x  your point gain.",
+    cost: new Decimal(10),
+        },
     },
 })
