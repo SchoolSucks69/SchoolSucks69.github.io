@@ -66,7 +66,7 @@ addLayer("n", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		Plank: new Decimal(0),
+		points: new Decimal(0),
     }},
     color: "#2f36b8",
     requires: new Decimal(200000), // Can be a function that takes requirement increases into account
