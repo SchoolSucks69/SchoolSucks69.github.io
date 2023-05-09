@@ -64,14 +64,14 @@ addLayer("n", {
     symbol: "NM", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
-        unlocked: false,
-		Plank: new Decimal(200),
+        unlocked: true,
+		Plank: new Decimal(0),
     }},
     color: "#4BDC13",
     requires: new Decimal(500), // Can be a function that takes requirement increases into account
     resource: "Nano", // Name of prestige currency
     baseResource: "Plank", // Name of resource prestige is based on
-    baseAmount() {return player.points}, // Get the current amount of baseResource
+    baseAmount() {return player.Plank}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
