@@ -20,6 +20,7 @@ addLayer("p", {
 	    if (hasUpgrade('p', 18)) mult = mult.times(2.3)
 	    if (hasUpgrade('p', 19)) mult = mult.times(2)
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
+	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -136,6 +137,15 @@ addLayer("n", {
     title: "Points Funnies",
     description: "10x  your point gain.",
     cost: new Decimal(2),
+        },
+	13: {
+    title: "Some Funnies",
+    description: " your point gain. will be effected (big commitment)",
+    cost: new Decimal(2),
+	effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
     },
 })
