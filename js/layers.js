@@ -126,5 +126,10 @@ addLayer("n", {
     description: "quad  your Plank gain.",
     cost: new Decimal(1),
         },
+        12: {
+    title: "Points Funnies",
+    description: "10x  your point gain.",
+    cost: new Decimal(2),
+        },
     },
 })
