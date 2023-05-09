@@ -91,6 +91,11 @@ addLayer("p", {
     description: "wow boost!",
     cost: new Decimal(10000),
         },
+	24: {
+    title: "Good! Boost 4",
+    description: "wow boost!",
+    cost: new Decimal(50000),
+        },
     },
 })
 addLayer("n", {
@@ -110,6 +115,7 @@ addLayer("n", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+	if (hasUpgrade('p', 24)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
