@@ -19,6 +19,7 @@ addLayer("p", {
 	    if (hasUpgrade('p', 17)) mult = mult.times(2.5)
 	    if (hasUpgrade('p', 18)) mult = mult.times(2.3)
 	    if (hasUpgrade('p', 19)) mult = mult.times(2)
+	    if (hasUpgrade('p', 25)) mult = mult.times(2)
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
@@ -99,7 +100,7 @@ addLayer("p", {
         },
 	25: {
     title: "Amazing Boost I",
-    description: "wow boost! again",
+    description: "wow boost! again 2x NM, PL and Points",
     cost: new Decimal(350000),
         },
     },
@@ -122,6 +123,7 @@ addLayer("n", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
 	if (hasUpgrade('p', 24)) mult = mult.times(2)
+	if (hasUpgrade('p', 25)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
