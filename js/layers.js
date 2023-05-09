@@ -67,11 +67,11 @@ addLayer("n", {
         unlocked: true,
 		Plank: new Decimal(0),
     }},
-    color: "#4BDC13",
-    requires: new Decimal(500), // Can be a function that takes requirement increases into account
+    color: "#2f36b8",
+    requires: new Decimal(200000), // Can be a function that takes requirement increases into account
     resource: "Nano", // Name of prestige currency
-    baseResource: "Plank", // Name of resource prestige is based on
-    baseAmount() {return player.Plank}, // Get the current amount of baseResource
+    baseResource: "points", // Name of resource prestige is based on
+    baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
@@ -85,5 +85,12 @@ addLayer("n", {
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+	    upgrades: {
+        11: {
+    title: "Plank Funnies",
+    description: "quad  your Plank gain.",
+    cost: new Decimal(1),
+        },
+    },
 })
