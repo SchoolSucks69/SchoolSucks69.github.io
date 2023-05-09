@@ -109,7 +109,7 @@ addLayer("p", {
     description: "big big commitment",
     cost: new Decimal(5000000),
     effect() {
-        return player.points.add(1).pow(0.0015)
+        return player[this.layer].points.add(1).pow(0.0015)
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
