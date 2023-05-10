@@ -203,14 +203,6 @@ addLayer("n", {
     cost: new Decimal(70),
         },
     },
-milestones: {
-    1: {
-        requirementDescription: "Oingo Boingo Super Pact",
-        effectDescription: "I can see into the future",
-        done() { return player[this.layer].w.points.gte(71) }
-    }
-    etc
-},
 })
 addLayer("m", {
     name: "MM", // This is optional, only used in a few places, If absent it just uses the layer id.
