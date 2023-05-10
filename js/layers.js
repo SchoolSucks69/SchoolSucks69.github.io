@@ -21,6 +21,7 @@ addLayer("p", {
 	    if (hasUpgrade('p', 19)) mult = mult.times(2)
 	    if (hasUpgrade('p', 25)) mult = mult.times(2)
             if (hasUpgrade('p', 26)) mult = mult.times(upgradeEffect('p', 26))
+            if (hasUpgrade('p', 30)) mult = mult.times(upgradeEffect('p', 30))
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
 	    if (hasUpgrade('n', 15)) mult = mult.times(8)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
@@ -124,6 +125,20 @@ addLayer("p", {
     description: "25% more points",
     cost: new Decimal(250000000),
         },
+	29: {
+    title: "Amazing Boost IV",
+    description: "6.9x more nano",
+    cost: new Decimal(500000000),
+        },
+	30: {
+    title: "Wilson",
+    description: "WILLSOOOOOON!!!!",
+    cost: new Decimal(5000000000),
+    effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+        },
     },
 })
 addLayer("n", {
@@ -144,6 +159,8 @@ addLayer("n", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
 	if (hasUpgrade('p', 24)) mult = mult.times(2)
+	if (hasUpgrade('m', 12)) mult = mult.times(2)
+	if (hasUpgrade('p', 29)) mult = mult.times(6.9)
 	if (hasUpgrade('p', 25)) mult = mult.times(2)
         return mult
     },
@@ -186,6 +203,14 @@ addLayer("n", {
     cost: new Decimal(70),
         },
     },
+milestones: {
+    1: {
+        requirementDescription: "Oingo Boingo Super Pact",
+        effectDescription: "I can see into the future",
+        done() { return player[this.layer].w.points.gte(71) }
+    }
+    etc
+},
 })
 addLayer("m", {
     name: "MM", // This is optional, only used in a few places, If absent it just uses the layer id.
@@ -219,6 +244,11 @@ addLayer("m", {
     title: "Quantum Foam Funnies",
     description: "50x your plank gain",
     cost: new Decimal(1),
+        },
+        12: {
+    title: "Quantum Foam Funnies Funnies!",
+    description: "10x your nano gain",
+    cost: new Decimal(2),
         },
     },
 })
