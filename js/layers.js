@@ -25,6 +25,7 @@ addLayer("p", {
             if (hasUpgrade('p', 30)) mult = mult.times(upgradeEffect('p', 30))
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
 	    if (hasUpgrade('n', 15)) mult = mult.times(8)
+	    if (hasUpgrade('n', 16)) mult = mult.times(10)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
     },
@@ -203,6 +204,11 @@ addLayer("n", {
     title: "Oingo Boingo Cringe Pact",
     description: "8x more plank gain this upgrade will come again tho",
     cost: new Decimal(70),
+        },
+        16: {
+    title: "Worm",
+    description: "MY friend anthony told me to",
+    cost: new Decimal(200),
         },
     },
 })
