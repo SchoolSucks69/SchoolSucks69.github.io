@@ -22,6 +22,7 @@ addLayer("p", {
 	    if (hasUpgrade('p', 25)) mult = mult.times(2)
             if (hasUpgrade('p', 26)) mult = mult.times(upgradeEffect('p', 26))
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
+	    if (hasUpgrade('n', 15)) mult = mult.times(8)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
     },
@@ -113,6 +114,16 @@ addLayer("p", {
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
+	27: {
+    title: "Amazing Boost II",
+    description: "50% more points",
+    cost: new Decimal(170000000),
+        },
+	28: {
+    title: "Amazing Boost III",
+    description: "25% more points",
+    cost: new Decimal(250000000),
+        },
     },
 })
 addLayer("n", {
@@ -169,5 +180,46 @@ addLayer("n", {
     description: "12x  your point gain.",
     cost: new Decimal(10),
         },
+        15: {
+    title: "Oingo Boingo Cringe Pact",
+    description: "8x more plank gain this upgrade will come again tho",
+    cost: new Decimal(70),
+        },
     },
 })
+addLayer("m", {
+    name: "MM", // This is optional, only used in a few places, If absent it just uses the layer id.
+    symbol: "MM", // This appears on the layer's node. Default is the id with the first letter capitalized
+    position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
+    startData() { return {
+        unlocked: true,
+		points: new Decimal(0),
+    }},
+    color: "#2f36b8",
+    requires: new Decimal(69000000000), // Can be a function that takes requirement increases into account
+    resource: "Micro", // Name of prestige currency
+    baseResource: "points", // Name of resource prestige is based on
+    baseAmount() {return player.points}, // Get the current amount of baseResource
+    type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    exponent: 0.5, // Prestige currency exponent
+    gainMult() { // Calculate the multiplier for main currency from bonuses
+        mult = new Decimal(1)
+        return mult
+    },
+    gainExp() { // Calculate the exponent on main currency from bonuses
+        return new Decimal(1)
+    },
+    row: 2, // Row the layer is in on the tree (0 is the first row)
+    hotkeys: [
+        {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+    ],
+    layerShown(){return true},
+	    upgrades: {
+        11: {
+    title: "Quantum Foam Funnies",
+    description: "50x your plank gain",
+    cost: new Decimal(1),
+        },
+    },
+})
+
