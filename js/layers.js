@@ -26,7 +26,6 @@ addLayer("p", {
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
 	    if (hasUpgrade('n', 15)) mult = mult.times(8)
 	    if (hasUpgrade('n', 16)) mult = mult.times(10)
-	    if (hasUpgrade('m', 11 mult = mult.times(50)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
     },
