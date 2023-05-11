@@ -8,7 +8,7 @@ let modInfo = {
 	discordName: "Endo",
 	discordLink: "No.com",
 	initialStartPoints: new Decimal (0), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 100,  // In hours
 }
 
 // Set your version in num and name
@@ -19,7 +19,7 @@ let VERSION = {
 
 let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.25</h3><br>
-		- bug fixes <br>
+		- bug fixes<br>
 		- Upgrades: some stuff (7)`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
