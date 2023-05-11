@@ -141,6 +141,21 @@ addLayer("p", {
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         },
+	31: {
+    title: "Logan Boost I",
+    description: "2x more",
+    cost: new Decimal(69000000000),
+        },
+	32: {
+    title: "Logan Boost II",
+    description: "3x more",
+    cost: new Decimal(500000000000),
+        },
+	33: {
+    title: "Logan Boost III",
+    description: "4x more",
+    cost: new Decimal(4200000000000),
+        },
     },
 })
 addLayer("n", {
