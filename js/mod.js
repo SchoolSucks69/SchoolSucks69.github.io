@@ -19,8 +19,8 @@ let VERSION = {
 
 let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.3</h3><br>
-		- 6 new upgrades for plank<br>
-		- 1 upgrade for nano `
+		- Added MM (Micro-Meters) <br>
+		- Upgrades: 2 Planks, 1 Nano and 1 Micro`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 
