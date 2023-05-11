@@ -26,6 +26,7 @@ addLayer("p", {
 	    if (hasUpgrade('n', 11)) mult = mult.times(4)
 	    if (hasUpgrade('n', 15)) mult = mult.times(8)
 	    if (hasUpgrade('n', 16)) mult = mult.times(10)
+	    if (hasUpgrade('m', 11 mult = mult.times(50)
 	    if (hasUpgrade('n', 13)) mult = mult.times(upgradeEffect('n', 13))
         return mult
     },
@@ -156,6 +157,21 @@ addLayer("p", {
     description: "4x more",
     cost: new Decimal(4200000000000),
         },
+	34: {
+    title: "Logan Boost IV",
+    description: "4x more",
+    cost: new Decimal(32000000000000),
+        },
+	35: {
+    title: "Logan Boost V",
+    description: "3x more",
+    cost: new Decimal(20000000000000),
+        },
+	36: {
+    title: "Logan Boost VI",
+    description: "10x more nano",
+    cost: new Decimal(169000000000000),
+        },
     },
 })
 addLayer("n", {
@@ -177,9 +193,10 @@ addLayer("n", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
 	if (hasUpgrade('p', 24)) mult = mult.times(2)
-	if (hasUpgrade('m', 12)) mult = mult.times(2)
+	if (hasUpgrade('m', 12)) mult = mult.times(10)
 	if (hasUpgrade('p', 29)) mult = mult.times(6.9)
 	if (hasUpgrade('p', 25)) mult = mult.times(2)
+	if (hasUpgrade('p', 36)) mult = mult.times(10)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
