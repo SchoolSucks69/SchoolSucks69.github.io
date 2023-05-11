@@ -18,7 +18,7 @@ let VERSION = {
 }
 
 let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.3</h3><br>
+	<h3>v0.25</h3><br>
 		- bug fixes <br>
 		- Upgrades: some stuff (7)`
 
@@ -62,8 +62,6 @@ if (hasUpgrade('p', 32)) gain = gain.times(3)
 if (hasUpgrade('p', 33)) gain = gain.times(4)
 if (hasUpgrade('p', 34)) gain = gain.times(4)
 if (hasUpgrade('p', 35)) gain = gain.times(3)
-
-
 	return gain
 }
 
