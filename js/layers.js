@@ -1,5 +1,5 @@
 addLayer("p", {
-    name: "PlankLength", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "PlanckLength", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "PL", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -9,7 +9,7 @@ addLayer("p", {
     color: "#4BDC13",
     branches: "n",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
-    resource: "Plank", // Name of prestige currency
+    resource: "Planck", // Name of prestige currency
     baseResource: "points", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
@@ -66,7 +66,7 @@ addLayer("p", {
         },
 	16: {
     title: "OMG Boost",
-    description: "wow plank boost!",
+    description: "wow planck boost!",
     cost: new Decimal(200),
         },
 	17: {
@@ -210,7 +210,7 @@ addLayer("n", {
 	    upgrades: {
         11: {
     title: "Plank Funnies",
-    description: "quad  your Plank gain.",
+    description: "quad  your Planck gain.",
     cost: new Decimal(1),
         },
         12: {
@@ -234,7 +234,7 @@ addLayer("n", {
         },
         15: {
     title: "Oingo Boingo Cringe Pact",
-    description: "8x more plank gain this upgrade will come again tho",
+    description: "8x more planck gain this upgrade will come again tho",
     cost: new Decimal(70),
         },
         16: {
@@ -274,7 +274,7 @@ addLayer("m", {
 	    upgrades: {
         11: {
     title: "Quantum Foam Funnies",
-    description: "50x your plank gain",
+    description: "50x your planck gain",
     cost: new Decimal(1),
         },
         12: {
