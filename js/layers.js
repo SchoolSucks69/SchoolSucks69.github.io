@@ -242,6 +242,11 @@ addLayer("n", {
     description: "MY friend anthony told me to",
     cost: new Decimal(200),
         },
+17: {
+    title: "Quick",
+    description: "MY friend logan told me to",
+    cost: new Decimal(1000),
+        },
     },
 })
 addLayer("m", {
